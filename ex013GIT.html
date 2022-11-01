@@ -8,19 +8,40 @@
     <style>
         body{background-color: aqua;
              font-family: Arial, Helvetica, sans-serif;
-            font-size: 25px;
+            font-size: 15px;
+            }
+            p {
+                font-size: 20px;
+                text-align: center;
+            }
+            h1 {
+                text-align: center;
+                padding: 50px;
+            }
+            footer{
+                padding: 100px;
+                text-align: center;
+                
             }
     </style>
 </head>
 <body>
 
     <H1>Esse site é para o calculo do IMC</H1>
-    <p>Para o calculo do IMC será necessario o valor do peso e altura, favor digite nos campos abaixo</p>
-    Digite seu nome <input type="text" name="nom" id="nom">
-    Digite sua idade <input type="number" name="ida" id="ida">
-    Digite seu peso <input type="number" name="pes" id="pes">
-    Digite sua altura <input type="number" name="alt" id="alt">
-    <input type="button" value="calcular" onclick="vai()">
+    <header>
+        <p>Para o calculo do IMC será necessario o valor do peso e altura, favor digite nos campos abaixo</p>
+    </header>
+    <ul>
+        
+        Digite seu nome <input type="text" name="nom" id="nom">
+        Digite sua idade <input type="number" name="ida" id="ida">
+        Digite seu peso <input type="number" name="pes" id="pes">
+        Digite sua altura <input type="number" name="alt" id="alt">
+        <input type="button" value="calcular" onclick="vai()">
+    
+    </ul>
+
+
     <div id="im"> </div>
 
     <script>function vai(){
@@ -48,6 +69,10 @@
 
 
     </script>
+
+    <footer>
+        <a href="#">Felipelima-DEV</a>
+    </footer>
     
     
 </body>
