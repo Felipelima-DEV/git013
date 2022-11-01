@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculando IMC</title>
+    <style>
+        body{background-color: aqua;
+             font-family: Arial, Helvetica, sans-serif;
+            font-size: 25px;
+            }
+    </style>
+</head>
+<body>
+
+    <H1>Esse site é para o calculo do IMC</H1>
+    <p>Para o calculo do IMC será necessario o valor do peso e altura, favor digite nos campos abaixo</p>
+    Digite seu nome <input type="text" name="nom" id="nom">
+    Digite sua idade <input type="number" name="ida" id="ida">
+    Digite seu peso <input type="number" name="pes" id="pes">
+    Digite sua altura <input type="number" name="alt" id="alt">
+    <input type="button" value="calcular" onclick="vai()">
+    <div id="im"> </div>
+
+    <script>function vai(){
+        var nome = window.document.getElementById('nom')
+        var idade = window.document.getElementById('ida')
+        var peso = window.document.getElementById('pes')
+        var altura = window.document.getElementById('alt')
+        var im = window.document.getElementById('im')
+        var n = (nome.value)
+        var i = (idade.value)
+        var p = Number(peso.value)
+        var a = Number(altura.value)
+        var imc = Number(p/(a*a)).toFixed(2)         
+        if (imc <= 18.5){im.innerHTML = (`<p>Voce esta abaixo do peso, procure um nutrocionista</p>`) + (` <p> seu nome é ${n}, sua idade é ${i}, seu IMC é ${imc} <br/> </p>`)}
+        else if(imc >= 18.6 && imc <= 24.9) {im.innerHTML = (`<p> Voce esta no seu peso IDEAL, parabens. <br/> </p> `) + (` <p> seu nome é ${n}, sua idade é ${i}, seu IMC é ${imc} <br/> </p>`)}
+        else if(imc >= 25 && imc <= 29.9) {im.innerHTML = (`<p> Voce esta levemente acima do peso, fique atento. <br/> </p> `) + (` <p> seu nome é ${n}, sua idade é ${i}, seu IMC é ${imc} <br/> </p>`)}
+        else if(imc >= 30 && imc <= 34.9) {im.innerHTML = (`<p> Voce esta com obesidade grau 1, procure um nutricionista. <br/> </p> `) + (` <p> seu nome é ${n}, sua idade é ${i}, seu IMC é ${imc} <br/> </p>`)}        
+        else if(imc >= 35 && imc <= 39.9) {im.innerHTML = (`<p> Voce esta com obesidade grau 2 (SEVERA). <br/> </p> `) + (` <p> seu nome é ${n}, sua idade é ${i}, seu IMC é ${imc} <br/> </p>`)}
+        else if(imc >= 40) {im.innerHTML = (`<p> Voce esta com obesidade grau 3 (MORBIDA). <br/> </p> `) + (` <p> seu nome é ${n}, sua idade é ${i}, seu IMC é ${imc} <br/> </p>`)}
+
+      
+
+
+    }
+
+
+    </script>
+    
+    
+</body>
+</html>
